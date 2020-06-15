@@ -7,13 +7,13 @@ class App < Sinatra::Base
     "#{@reverse}"
   end
   
-  get "/square/:number" do 
+  get '/square/:number' do 
     @square = params[:number].to_i * params[:number].to_i
     "#{@square}"
   end
   
-  get "/say/:number/:phrase" do 
-    @number = params[:number]
+  get '/say/:number/:phrase' do 
+    @number = params[:number].to_i
     @phrase = params[:phrase]
     "#{@phrase}\n" * @number 
   end
